@@ -31,7 +31,14 @@
 */
 
 //CODE HERE
-
+const pizza = {
+    name: 'Pepperolli Baby',
+    price: 10.99,
+    category: 'entree',
+    popularity: 9,
+    rating: 4.5,
+    tags: ['Meat', 'Not Gluten-Free', 'kids']
+}
 
 
 //////////////////PROBLEM 2////////////////////
@@ -43,6 +50,7 @@
 */
 
 //CODE HERE
+console.log(pizza.name)
 
 
 /*
@@ -53,6 +61,7 @@
 */
 
 //CODE HERE
+console.log(pizza.tags[1])
 
 
 /*
@@ -63,7 +72,8 @@
 */
 
 //CODE HERE
-
+let {price} = pizza
+console.log (price)
 
 /*
     Fourth, and last, destructure the category
@@ -73,6 +83,8 @@
 */
 
 //CODE HERE
+let {category} = pizza
+console.log(category)
 
 
 //////////////////PROBLEM 3////////////////////
@@ -88,6 +100,43 @@
 */
 
 //CODE HERE
+let foodArr = [
+    {
+        name: 'Spaghetti',
+        price: 9.99,
+        popularity: 8,
+        rating: 4,
+        tags: ['Kids', 'Not Gluten-Free', 'Noodles']
+    },
+    {
+        name: 'Chicken Alfredo',
+        price: 12.99,
+        popularity: 10,
+        rating: 4.4,
+        tags: ['Noodles', 'Not Gluten-Free', 'Chicken']
+    },
+    {
+        name: 'Chicken Nuggets',
+        price: 5.99,
+        popularity: 6,
+        rating: 4.9,
+        tags: ['Kids', 'Not Gluten-Free', 'Chicken']
+    },
+    {
+        name: 'Beef Kebabs',
+        price: 8.99,
+        popularity: 6.5,
+        rating: 3.5,
+        tags: ['Gluten-Free', 'Beef', 'Spicy']
+    },
+    {
+        name: 'Ribeye Steak',
+        price: 15.99,
+        popularity: 7,
+        rating: 5,
+        tags: ['Gluten-Free', 'Beef']
+    }
+]
 
 
 
@@ -104,9 +153,16 @@
 */
 
 //CODE HERE
-
-// const filteredFood = foodArr.filter(/* CALLBACK HERE */)
-
+function foodFilter(arr, tag){
+    let filteredFood = [];
+    for (i = 0; i < arr.length; i++){
+        if (arr[i].tags.includes(tag)){
+             filteredFood.push(arr[i].name)
+        }
+    }
+   return filteredFood
+}
+console.log(foodFilter(foodArr, 'Kids'))
 
 
 //////////////////PROBLEM 5////////////////////
@@ -144,12 +200,24 @@
         If the type isn't `below`, return objects whose
         value for the given property is less than the 
         `number` passed in
-    
+
     Return the filtered array from the entire function
 */
-
-//CODE HERE
-
+function filterByProperty(property, number, type){
+    let filteredFood = []
+    for (i = 0; i= foodArr.length; i++){
+        if (type === 'Above'){
+            if(property > number) {
+              filteredFood.push(foodArr[i])
+            }
+        } else {
+            if(property < number){
+                filteredFood.push(foodArr[i])
+            }
+        }
+    }
+}
+console.log(filterByProperty('rating', 6, 'Above'))
 
 /*
     Invoke the `filterByProperty` function passing
