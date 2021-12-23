@@ -22,7 +22,9 @@
 */
 
 //CODE HERE
-
+let greetUser = (username) => {
+    console.log('Welcome back, ' + username)
+}
 
 
 //////////////////PROBLEM 2////////////////////
@@ -48,7 +50,16 @@
 const deliveryAreaZipCodes = [85205, 85204, 85203, 85213, 85206]
 
 //CODE HERE
-
+function canWeDeliver(zipCode) {
+    for (i= 0; i<deliveryAreaZipCodes.length; i++){
+        if (zipCode === deliveryAreaZipCodes[i]){
+            return (console.log("You're in our delivery zone!"));
+        } else {
+            return console.log("Sorry, we can't deliver to that address.");
+        }
+        
+    }
+}
 
 
 /* 
@@ -69,6 +80,15 @@ const deliveryAreaZipCodes = [85205, 85204, 85203, 85213, 85206]
 */
 
 // CODE HERE
+function canWeDeliver2(zipCode){
+    if (deliveryAreaZipCodes.includes(zipCode)){
+        return console.log("You're in our delivery zone!");
+    } else{
+        return console.log("Sorry, we can't deliver to that address.")
+    }
+}
+
+
 
 
 //////////////////PROBLEM 3////////////////////
@@ -91,7 +111,7 @@ const deals = [
     }, 
     {
         title: 'Free Kids Meal with 2 Regular Entrees', 
-        desc: '   This deal lasts until the end of March! '
+        desc: 'This deal lasts until the end of March!'
     }
 ]
 
@@ -105,6 +125,7 @@ const deals = [
 */
 
 //CODE HERE
+ deals[0].title = deals[0].title.replace('15', '10')
 
 
 
@@ -122,3 +143,5 @@ const deals = [
 */
 
 //CODE HERE
+deals[1].desc = deals[1].desc.replace('March', 'April');
+console.log(deals)
