@@ -205,20 +205,21 @@ console.log(foodFilter(foodArr, 'Kids'))
 */
 function filterByProperty(property, number, type){
     let filteredFood = []
-    for (i = 0; i= foodArr.length; i++){
+    for (i = 0; i < foodArr.length; i++){
         if (type === 'Above'){
-            if(property > number) {
+            if(foodArr[i][property] > number) {
               filteredFood.push(foodArr[i])
             }
-        } else {
-            if(property < number){
+        } else if (type === 'Below') {
+            if(foodArr[i][property] < number){
                 filteredFood.push(foodArr[i])
             }
         }
     }
+    return filteredFood
 }
-console.log(filterByProperty('rating', 6, 'Above'))
-
+console.log(filterByProperty('price', 9, 'Above'))
+//console.log(foodArr[3]['rating'])
 /*
     Invoke the `filterByProperty` function passing
     in a value for each paramter.
