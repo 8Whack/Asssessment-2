@@ -32,7 +32,7 @@
 
 //CODE HERE
 const pizza = {
-    name: 'Pepperolli Baby',
+    name: 'Pizzarolli Baby',
     price: 10.99,
     category: 'entree',
     popularity: 9,
@@ -218,7 +218,7 @@ function filterByProperty(property, number, type){
     }
     return filteredFood
 }
-console.log(filterByProperty('price', 9, 'Above'))
+
 //console.log(foodArr[3]['rating'])
 /*
     Invoke the `filterByProperty` function passing
@@ -228,3 +228,4 @@ console.log(filterByProperty('price', 9, 'Above'))
 */
 
 //CODE HERE
+console.log(filterByProperty('price', 9, 'Above'))
