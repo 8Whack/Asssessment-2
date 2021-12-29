@@ -84,7 +84,7 @@ console.log (calcFinalPrice(100, 25, .07))
     TEXT ANSWER HERE
 I think that to track a valued customer, without invading 
 their privacy too much, you need to keep it simple. 
-I'd recommend that you only track name, credit card info, 
+I'd recommend that you only track name, credit card info, phone number 
 and their favorite dish. That way you know some personality info, 
 and a way for them to purchase your product more easily.
 Too much more could be an invasion of privacy- 
@@ -100,5 +100,8 @@ you could offer it, but I wouldn't require it.
 let customer = {
     name: 'Calvin',
     creditCard: 1234567890,
+    phoneNumber: 8017891254,
     faveDish: 'Pad Thai'
 }
+
+//done!

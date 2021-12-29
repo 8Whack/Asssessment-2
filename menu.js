@@ -229,3 +229,5 @@ function filterByProperty(property, number, type){
 
 //CODE HERE
 console.log(filterByProperty('price', 9, 'Above'))
+
+//Done!

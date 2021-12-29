@@ -102,7 +102,7 @@ employees = []
 class Manager extends Employee {
     constructor(name, shifts, employees){
         super(name, shifts)
-        //this.employees should be an array when making a new manager.
+        //this.employees should be an array when making a new manager
         this.employees = employees
     }
     getEmployees(){
@@ -154,3 +154,5 @@ manager.addEmployee('Thomas')
 
 //CODE HERE
 manager.getEmployees()
+
+//done!
